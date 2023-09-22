@@ -52,18 +52,22 @@
 //     console.log(`John's BMI ${BMIJohn}, is higher than Mark's ${BMIMark}, !`);
 // }
 
-let scoreDolphins = (98+108+89)/3;
-let scoreKoalas = (88+91+110)/3;
+// let scoreDolphins = (98+108+89)/3;
+// let scoreKoalas = (88+91+110)/3;
 
-if(scoreDolphins> scoreKoalas){
-    console.log("Dolphins win the trophy");
+// if(scoreDolphins> scoreKoalas){
+//     console.log("Dolphins win the trophy");
 
-}else if(scoreKoalas > scoreDolphins)
-{
-    console.log("Koalas win the trophy");
-}
-else if(scoreDolphins === scoreDolphins)
-{
-    console.log("both of them win the trophy");
-}
+// }else if(scoreKoalas > scoreDolphins)
+// {
+//     console.log("Koalas win the trophy");
+// }
+// else if(scoreDolphins === scoreDolphins)
+// {
+//     console.log("both of them win the trophy");
+// }
 
+
+const bill = 275;
+const tip = bill<=300 && bill >=50 ? bill * 0.15 : bill * 0.2;
+console.log(`the bill was ${bill}, the tip was ${tip}, and the total was ${bill + tip} `);
