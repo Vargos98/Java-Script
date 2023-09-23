@@ -37,3 +37,20 @@
 // }
 
 // console.log(calcAge(1998));
+
+
+
+const cutPieces = function(fruit){
+    return fruit* 4;
+
+}
+
+const fruitProcessor = function(apples, oranges){
+    const applePieces = cutPieces(apples);
+    const orangePieces = cutPieces(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of oranges tastes tasty`;
+    return juice;
+}
+
+console.log(fruitProcessor(5,4));
