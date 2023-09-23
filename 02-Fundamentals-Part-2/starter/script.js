@@ -79,3 +79,14 @@ const calAverage = (num1, num2, num3) =>
 
 //     checkWinner(scoreDolphins, scoreKoalas);
 
+//arr
+
+
+let arr= [1,2,3,4,5];
+
+
+console.log(arr);
+arr.pop();
+console.log(arr);
+delete arr[1];
+console.log(arr);
