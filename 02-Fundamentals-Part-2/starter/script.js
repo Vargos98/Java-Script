@@ -40,17 +40,42 @@
 
 
 
-const cutPieces = function(fruit){
-    return fruit* 4;
+// const cutPieces = function(fruit){
+//     return fruit* 4;
 
-}
+// }
 
-const fruitProcessor = function(apples, oranges){
-    const applePieces = cutPieces(apples);
-    const orangePieces = cutPieces(oranges);
+// const fruitProcessor = function(apples, oranges){
+//     const applePieces = cutPieces(apples);
+//     const orangePieces = cutPieces(oranges);
 
-    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of oranges tastes tasty`;
-    return juice;
-}
+//     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of oranges tastes tasty`;
+//     return juice;
+// }
 
-console.log(fruitProcessor(5,4));
+// console.log(fruitProcessor(5,4));
+
+
+const calAverage = (num1, num2, num3) =>
+     (num1+num2+num3)/3;
+
+
+
+
+//   let scoreDolphins = calAverage(98,21,65); 
+//     let scoreKoalas = calAverage(31,91,98);
+//     console.log(scoreDolphins ,scoreKoalas);
+ 
+
+//     const checkWinner = function(avgDolphins, avgKoalas){
+//         if(avgDolphins >=2* avgKoalas){
+//            console.log(  `Dolphins win ${avgDolphins} vs ${avgKoalas}`)
+//         }else if(avgKoalas>= 2* avgDolphins){
+//              console.log(`Koalas win ${avgKoalas} vs ${avgDolphins}`)
+//         }else{
+//             console.log(`Nobody wins`)
+//         }
+//     }
+
+//     checkWinner(scoreDolphins, scoreKoalas);
+
