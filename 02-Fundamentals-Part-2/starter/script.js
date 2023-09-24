@@ -82,20 +82,50 @@ const calAverage = (num1, num2, num3) =>
 //arr
 
 
-let arr= [1,2,3,4,5];
-let brr =[6,7,8,9];
+// let arr= [1,2,3,4,5];
+// let brr =[6,7,8,9];
 
-console.log(arr);
-arr.pop();
-console.log(arr);
-arr.join("-");
-console.log(arr);
-arr.unshift(12);
-console.log(arr);
+// console.log(arr);
+// arr.pop();
+// console.log(arr);
+// arr.join("-");
+// console.log(arr);
+// arr.unshift(12);
+// console.log(arr);
 
-let a2 = arr.concat(brr);
-console.log(a2);
+// let a2 = arr.concat(brr);
+// console.log(a2);
 
-let b2 = arr.keys();
-console.log(b2);
+// let b2 = arr.keys();
+// console.log(b2);
 
+const jonas ={
+     firstName: 'Umesh',
+     lastName:'Kumar',
+     birthYear: 1998,
+     job:'student',
+     friends:['Samir', 'Amit', 'Bongoli'],
+     calcAge: function(){
+          console.log(this);
+          return 2023- this.birthYear;
+     }
+};
+
+console.log(jonas.calcAge());
+
+
+
+// console.log(jonas.age);
+
+// const interestedIn = prompt ('What do you want to know ?');
+
+// if(jonas[interestedIn]){
+//      console.log(jonas[interestedIn])
+// }else{
+//      console.log('please ask something different');
+// }
+
+
+// const challenge = console.log(`${jonas['firstName']}  has  ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+// console.log(challenge);
