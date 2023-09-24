@@ -83,10 +83,19 @@ const calAverage = (num1, num2, num3) =>
 
 
 let arr= [1,2,3,4,5];
-
+let brr =[6,7,8,9];
 
 console.log(arr);
 arr.pop();
 console.log(arr);
-delete arr[1];
+arr.join("-");
 console.log(arr);
+arr.unshift(12);
+console.log(arr);
+
+let a2 = arr.concat(brr);
+console.log(a2);
+
+let b2 = arr.keys();
+console.log(b2);
+
