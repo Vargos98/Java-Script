@@ -42,3 +42,9 @@ document.addEventListener('keydown', function (e) {
 
 // const ab = a == b ? 'it works': 'it doesnt works';
 // console.log(ab);
+
+// const arr = [1,2,3,4,5,6];
+// const brr = arr;
+// brr.splice(2,1,35,26);
+// console.log(brr)
+// console.log(brr[brr.length-1]);

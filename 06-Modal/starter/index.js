@@ -1,0 +1,8 @@
+const arr = [1,2,3,4,5,6,7,8,9,10];
+const brr = [7,8,9];
+
+const mergedArr = [...arr,...brr];
+console.log(mergedArr);
+ const [a,b,c,d, ...rest] = arr;
+ 
+ console.log(a,b,c,d,rest);
