@@ -1,0 +1,7 @@
+
+let gender = false;
+if (gender == true) {
+  console.log(`Hi there maam`);
+}if(gender==false){
+    console.log(`hi ther sir`)
+}
