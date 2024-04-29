@@ -13,8 +13,8 @@ const person={
 
 console.log(person);
 
-const jsonStringify = JSON.stringify(person);
+const jsonStringify = JSON.stringify(person); // will convert it into json format.
 console.log(jsonStringify);
 
-const jsonParse = JSON.parse(jsonStringify);
+const jsonParse = JSON.parse(jsonStringify); // will convert the json format to object.
 console.log(jsonParse);
