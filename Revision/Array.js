@@ -7,3 +7,7 @@ console.log(favNumbers);
 const mixedArr = ["Umesh",["Vargos", "EkThaTaxi", "ShortbustGangster"], 123, true];
 console.log(mixedArr)
 console.log(favSingers[2]);
+
+
+console.log(favNumbers.slice(1,3))
+console.log(favNumbers.sort())
