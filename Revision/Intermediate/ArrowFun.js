@@ -21,5 +21,9 @@ console.log(greetings("Vargos"));
 
 const aloha = surname => (`Your surname is ${surname}`);
 
-
 console.log(aloha("EkThaTaxi"));
+
+
+const double = n => n*2;
+
+console.log(double(5));
