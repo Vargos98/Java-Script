@@ -11,6 +11,7 @@ console.log(res);
 
 //function Expression
 
+
 const greet = function(name){
   console.log(`hi there ${name}`);
 }

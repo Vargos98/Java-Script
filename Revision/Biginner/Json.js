@@ -1,4 +1,4 @@
-const person={
+const person={ //// This is Object.
   name:"Umesh",
   age:25,
   email:"vargos98@gmail.com",
