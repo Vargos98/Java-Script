@@ -31,3 +31,11 @@ const {color} = student;
 console.log(color); //OUT: undefined.
 
 // name should be same when destructuring an Object.
+
+
+// Now we can change the name of the objects while destructuring by providing an alias name.
+
+
+const {name: naam, age: umar} = student;
+console.log(naam);
+console.log(umar);
