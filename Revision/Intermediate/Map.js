@@ -19,3 +19,11 @@ let peoples = [
 ]
 
 let info = peoples.map(peeps=> console.log(peeps));
+
+
+//challenge 
+
+const values = [12,13,51,511,63,76];
+
+const res = values.map(val=> val*2);
+console.log(res);
