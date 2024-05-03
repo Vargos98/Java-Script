@@ -10,6 +10,6 @@ const sum = numbers.reduce((previousVal, currentVal)=>{
   console.log(`currentVal : ${currentVal}`);
   
   return previousVal + currentVal;
-},0);
+},0); // 0 here stands for the intial value/previous val.
 
 console.log(sum);
