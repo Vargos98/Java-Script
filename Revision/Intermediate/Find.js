@@ -10,3 +10,15 @@ const peoples = [
 
 
 console.log(peoples.find(peeps=> peeps.name== "Samir"));
+
+
+//Challenge 
+
+const ages  = [12,34,56,10,9,27,64];
+
+function checkAge(age){
+  return age >= 18;
+}
+
+const res = ages.find(checkAge);
+console.log(res);
