@@ -9,4 +9,4 @@ const peoples = [
 ]
 
 
-console.log(peoples.find(peeps=> peeps.name== "Samir"))
+console.log(peoples.find(peeps=> peeps.name== "Samir"));

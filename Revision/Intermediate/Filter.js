@@ -1,4 +1,4 @@
-// the filter() method is a built-in array method in JavaScript that allows you to create a new array containing elements that pass a certain condition. it porvides a clean and concise way to filter out elements from an array based on a specified criteria.
+// the filter() method is a built-in array method in JavaScript that "allows you to create a new array" containing elements that pass a certain condition. it porvides a clean and concise way to filter out elements from an array based on a specified criteria.
 
 const songs = [
   {name: "Lucky You", duration: 4.34},

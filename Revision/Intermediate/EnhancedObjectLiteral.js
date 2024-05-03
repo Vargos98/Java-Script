@@ -1,6 +1,6 @@
 const user = (name, age, work) => {
   return {
-    name,
+    name,   // This is the example of enhanced object Literals as no alias has been derived directly.
     age,
     work,
   };

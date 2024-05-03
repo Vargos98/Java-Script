@@ -3,4 +3,4 @@ const multi = (a,b=1)=>{
 }
 
 console.log(multi(3,2));
-console.log(multi());
+console.log(multi(2));
