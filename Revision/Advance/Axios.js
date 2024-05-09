@@ -10,7 +10,7 @@ const axios = require('axios');
 
 const response = axios.get('https:API-URL');
 
-response.then(response => {
+response.then(response => { 
   console.log(response);             // data automatically converted from json format
 })
   .catch(error => {
@@ -33,3 +33,6 @@ async function fetchData() {
   }
 }
 fetchData();
+
+
+
