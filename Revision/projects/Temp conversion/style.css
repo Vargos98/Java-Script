@@ -10,7 +10,7 @@ form{
   background-color: rgb(255, 255, 255);
   text-align: center;
   max-width: 350px;
-  margin: auto;
+  margin: 5rem auto;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.411);
@@ -47,5 +47,5 @@ button:hover{
 #result{
   font-size: 1.75em;
   font-weight: bold;
-  
+
 }
