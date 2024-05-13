@@ -8,7 +8,7 @@ fetch("https:API-URL")
   if(!response){
     throw new Error("Network response was not ok!");
   }
-  return response.json();
+  return data = response.json();
 })
 
 .then(data=>{
