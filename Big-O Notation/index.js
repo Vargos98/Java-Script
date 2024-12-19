@@ -17,4 +17,4 @@ function anotherFunChallenge(input) {
 }
 // Big O = 4 + 7n = O(n)
 
-Answer : O(n);
+Answer : O()
