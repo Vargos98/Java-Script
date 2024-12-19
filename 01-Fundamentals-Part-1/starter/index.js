@@ -68,6 +68,23 @@
 // }
 
 
-const bill = 275;
-const tip = bill<=300 && bill >=50 ? bill * 0.15 : bill * 0.2;
-console.log(`the bill was ${bill}, the tip was ${tip}, and the total was ${bill + tip} `);
+// const bill = 275;
+// const tip = bill<=300 && bill >=50 ? bill * 0.15 : bill * 0.2;
+// console.log(`the bill was ${bill}, the tip was ${tip}, and the total was ${bill + tip} `);
+
+const TheHobbit = function (title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
+  this.info = function () {
+    console.log(`${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "was read" : "not read yet"}`);
+  };
+};
+
+// Create an instance of TheHobbit
+const book = new TheHobbit("The Hobbit", "J.R.R. Tolkien", 310, false);
+
+// Call the info method
+book.info();
+ // "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
