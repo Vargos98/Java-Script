@@ -30,18 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(tasks)//clearing the input value after the task has been submitted.
   });
 
-  function saveTasks() {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }
+  
 
   function renderTask(task) {
     console.log(task.text);
     const li = document.createElement('li');
     li.setAttribute('data-id',task.id);
+    if(task.completed)li.classList.add('completed');
+
+
     li.innerHTML =`
     <span>${task.text}</span>
     <button>Delete</button>
     `
+    li.addEventListener('click',(e)=>{
+      if(e.target.tagName==='BUTTON') return;
+      task.completed = !task.completed;
+      li.classList.toggle('completed');
+      saveTasks();
+    })
+    function saveTasks() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
     todoList.appendChild(li);
   }
 })
