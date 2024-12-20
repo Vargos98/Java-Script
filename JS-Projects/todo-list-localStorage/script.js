@@ -16,6 +16,11 @@ addTaskButton.addEventListener("click", ()=> {
     completed:false
   }
   tasks.push(newTask)
+  saveTasks();
   todoInput.value = ""; 
   console.log(tasks)//clearing the input value after the task has been submitted.
 });
+
+function saveTasks(){
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
