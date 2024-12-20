@@ -16,5 +16,6 @@ addTaskButton.addEventListener("click", ()=> {
     completed:false
   }
   tasks.push(newTask)
-  todoInput.value = ""; //clearing the input value after the task has been submitted.
+  todoInput.value = ""; 
+  console.log(tasks)//clearing the input value after the task has been submitted.
 });
