@@ -7,44 +7,33 @@
 </head>
 <body>
 
-  <h1>Stone Paper Scissors</h1>
+  <h1>Rock Paper Scissors</h1>
+  <button onclick="playGame(0)">Stone</button>
+  <button onclick="playGame(1)">Paper</button>
+  <button onclick="playGame(2)">Scissors</button>
   
-  <button onclick="playGame('Stone')">Stone</button>
-  <button onclick="playGame('Paper')">Paper</button>
-  <button onclick="playGame('Scissors')">Scissors</button>
-
   <p id="result"></p>
 
   <script>
     function playGame(userChoice) {
-      let randomOptions = Math.floor(Math.random() * 3);
-      let computerChoice = '';
+      let computerChoice = Math.floor(Math.random() * 3);
+      const choices = ["Stone", "Paper", "Scissors"];
 
-      if (randomOptions === 0) {
-        computerChoice = 'Stone';
-      } else if (randomOptions === 1) {
-        computerChoice = 'Paper';
-      } else {
-        computerChoice = 'Scissors';
-      }
-
-      console.log("Computer Choice:", computerChoice);
-      console.log("User Choice:", userChoice);
-
-      let result = '';
-      if (computerChoice === userChoice) {
+      let result = "";
+      if (userChoice === computerChoice) {
         result = "It's a tie!";
       } else if (
-        (computerChoice === 'Stone' && userChoice === 'Scissors') ||
-        (computerChoice === 'Scissors' && userChoice === 'Paper') ||
-        (computerChoice === 'Paper' && userChoice === 'Stone')
+        (userChoice === 0 && computerChoice === 2) ||  // Stone beats Scissors
+        (userChoice === 2 && computerChoice === 1) ||  // Scissors beats Paper
+        (userChoice === 1 && computerChoice === 0)     // Paper beats Stone
       ) {
-        result = "Computer wins!";
-      } else {
         result = "You win!";
+      } else {
+        result = "Computer wins!";
       }
 
-      document.getElementById("result").innerText = result;
+      // Use innerHTML instead of innerText if you want to add formatting
+      document.getElementById("result").innerHTML = `<h2>User chose: ${choices[userChoice]} | Computer chose: ${choices[computerChoice]}</h2><h3>${result}</h3>`;
     }
   </script>
 
