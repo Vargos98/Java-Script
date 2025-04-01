@@ -5,39 +5,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #2980b9;
+    }
+    .score-board {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    #result {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-
   <h1>Rock Paper Scissors</h1>
-  <button onclick="playGame(0)">Stone</button>
-  <button onclick="playGame(1)">Paper</button>
-  <button onclick="playGame(2)">Scissors</button>
+  <button class="btn" onclick="playGame(0)">Rock</button>
+  <button class="btn" onclick="playGame(1)">Paper</button>
+  <button class="btn" onclick="playGame(2)">Scissors</button>
 
   <p id="result"></p>
-  <p><strong>User Score:</strong> <span id="userScore">0</span></p>
-  <p><strong>Computer Score:</strong> <span id="computerScore">0</span></p>
+  <div class="score-board">
+    <p><strong>User Score:</strong> <span id="userScore">0</span></p>
+    <p><strong>Computer Score:</strong> <span id="computerScore">0</span></p>
+  </div>
 
   <script>
-    // Retrieve stored scores from localStorage or initialize them to 0
     let userScore = JSON.parse(localStorage.getItem('userScore')) || 0;
     let computerScore = JSON.parse(localStorage.getItem('computerScore')) || 0;
 
-    // Update the displayed scores when the page loads
     document.getElementById("userScore").innerText = userScore;
     document.getElementById("computerScore").innerText = computerScore;
 
     function playGame(userChoice) {
       let computerChoice = Math.floor(Math.random() * 3);
-      const choices = ["Stone", "Paper", "Scissors"];
+      const choices = ["Rock", "Paper", "Scissors"];
       let result = "";
 
       if (userChoice === computerChoice) {
         result = "It's a tie!";
       } else if (
-        (userChoice === 0 && computerChoice === 2) ||  // Stone beats Scissors
-        (userChoice === 2 && computerChoice === 1) ||  // Scissors beats Paper
-        (userChoice === 1 && computerChoice === 0)     // Paper beats Stone
+        (userChoice === 0 && computerChoice === 2) ||
+        (userChoice === 2 && computerChoice === 1) ||
+        (userChoice === 1 && computerChoice === 0)
       ) {
         result = "You win!";
         userScore++;
@@ -46,17 +80,14 @@
         computerScore++;
       }
 
-      // Save the updated scores in localStorage
       localStorage.setItem('userScore', JSON.stringify(userScore));
       localStorage.setItem('computerScore', JSON.stringify(computerScore));
 
-      // Update the displayed results and scores
-      document.getElementById("result").innerHTML = `<h2>User chose: ${choices[userChoice]} | Computer chose: ${choices[computerChoice]}</h2><h3>${result}</h3>`;
+      document.getElementById("result").innerHTML = `<h2>You chose: ${choices[userChoice]} | Computer chose: ${choices[computerChoice]}</h2><h3>${result}</h3>`;
       document.getElementById("userScore").innerText = userScore;
       document.getElementById("computerScore").innerText = computerScore;
     }
   </script>
-
 </body>
 
 </html>
