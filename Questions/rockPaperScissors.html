@@ -13,13 +13,23 @@
   <button onclick="playGame(2)">Scissors</button>
   
   <p id="result"></p>
+  <p><strong>User Score:</strong> <span id="userScore">0</span></p>
+  <p><strong>Computer Score:</strong> <span id="computerScore">0</span></p>
 
   <script>
+    // Retrieve stored scores from localStorage or initialize them to 0
+    let userScore = JSON.parse(localStorage.getItem('userScore')) || 0;
+    let computerScore = JSON.parse(localStorage.getItem('computerScore')) || 0;
+
+    // Update the displayed scores when the page loads
+    document.getElementById("userScore").innerText = userScore;
+    document.getElementById("computerScore").innerText = computerScore;
+
     function playGame(userChoice) {
       let computerChoice = Math.floor(Math.random() * 3);
       const choices = ["Stone", "Paper", "Scissors"];
-
       let result = "";
+
       if (userChoice === computerChoice) {
         result = "It's a tie!";
       } else if (
@@ -28,12 +38,20 @@
         (userChoice === 1 && computerChoice === 0)     // Paper beats Stone
       ) {
         result = "You win!";
+        userScore++;
       } else {
         result = "Computer wins!";
+        computerScore++;
       }
+      
+      // Save the updated scores in localStorage
+      localStorage.setItem('userScore', JSON.stringify(userScore));
+      localStorage.setItem('computerScore', JSON.stringify(computerScore));
 
-      // Use innerHTML instead of innerText if you want to add formatting
+      // Update the displayed results and scores
       document.getElementById("result").innerHTML = `<h2>User chose: ${choices[userChoice]} | Computer chose: ${choices[computerChoice]}</h2><h3>${result}</h3>`;
+      document.getElementById("userScore").innerText = userScore;
+      document.getElementById("computerScore").innerText = computerScore;
     }
   </script>
 
